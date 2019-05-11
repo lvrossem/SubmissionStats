@@ -1,0 +1,15 @@
+input {
+    margin-right: 5em;
+}
+
+body {
+    text-align: center;
+    font-family: "Courier New";
+    font-size: 22px;
+    color: #DC3D24;
+    background-color: #232B2B;
+}
+
+select {
+    min-width: 60px;
+}
