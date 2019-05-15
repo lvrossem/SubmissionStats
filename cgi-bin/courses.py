@@ -1,10 +1,22 @@
-print('Content-Type: text/html')
-print()
-print('<html>')
-print('<head><title>Hello from Python</title></head>')
-print('<body>')
-print('<h2>hello</h2>')
-print('</body></html>')
+import json
+import cgi
+
+
+def courses():
+    jsonDict = dict()
+    index = 0
+
+    for regel in open('courses.tsv', 'r'):
+        if index != 0:
+            regellijst = regel.split("\t")
+            jsonDict[regellijst[0]] = regellijst[1] + " " + regellijst[2]
+        index += 1
+
+    print("Content-Type: application/json")
+    print()
+    print(json.dumps(jsonDict))
+
+courses()
 
 
 
