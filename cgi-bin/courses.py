@@ -1,8 +1,6 @@
 import json
 import cgi
 
-
-
 jsonDict = dict()
 index = 0
 
